@@ -2,7 +2,7 @@
 
 Group Project by: David Blascyk, Michael Laska, Ingris O'Connor, and Cindy Pendarvis
 
-An interactive recipe nutrition analysis dashboard available to the public at <a href="https://blasda01.github.io/Recipe_Nutrition_App/" target="_blank">https://blasda01.github.io/Recipe_Nutrition_App/</a>.
+An interactive nutrition analysis dashboard available to the public at <a href="https://blasda01.github.io/Recipe_Nutrition_App/" target="_blank">https://blasda01.github.io/Recipe_Nutrition_App/</a>.
 
 Have you ever wanted to make a recipe, but weren’t sure just how good that recipe really is for your health? 
 Or you really wish you could figure out if that favorite recipe could be healthy with just a few slight alterations. 
@@ -17,7 +17,7 @@ Our project focused on utilizing recipe data to help the user visualize and unde
 
 *Create buttons to display new graph details (ie changing view from Calories to Protein)
 
-*Create functions to alter nutrition information graphics once user inputs alterred ingredient amounts.
+*Create functions to change nutrition information graphics once user inputs alterred ingredient amounts.
 
 
 **Tools Used**
