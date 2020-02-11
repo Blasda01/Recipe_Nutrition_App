@@ -232,7 +232,7 @@ function updatePlot()
     var newSize = newY.map(x =>x * 1.0);        //irrelevant now using sizeref
     var newMarker = {
         color: [70, 10, 20, 0, 18, 30 ,94, 1, 80,97, 65, 3, 22, 56, 19],
-        // colorscale: "Jet",
+        colorscale: "Jet",
         cmin: 0,
         cmax: 30,
         size: newSize,
@@ -393,7 +393,7 @@ function graphicChanged() {
         
         marker: {
         color: [70, 10, 20, 0, 18, 30 ,94, 1, 80,97, 65, 3, 22, 56, 19],
-        // colorscale: "Jet",
+        colorscale: "Jet",
         cmin: 0,
         cmax: 30,
         size: sizeList,
