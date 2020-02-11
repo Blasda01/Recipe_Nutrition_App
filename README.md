@@ -2,7 +2,7 @@
 
 Group Project by: David Blascyk, Michael Laska, Ingris O'Connor, and Cindy Pendarvis
 
-An interactive recipe nutrition analysis dashboard available to the public at ![https://blasda01.github.io/Recipe_Nutrition_App/](https://blasda01.github.io/Recipe_Nutrition_App/).
+An interactive recipe nutrition analysis dashboard available to the public at <a href="https://blasda01.github.io/Recipe_Nutrition_App/" target="_blank">https://blasda01.github.io/Recipe_Nutrition_App/</a>.
 
 Have you ever wanted to make a recipe, but weren’t sure just how good that recipe really is for your health? 
 Or you really wish you could figure out if that favorite recipe could be healthy with just a few slight alterations. 
@@ -11,7 +11,7 @@ Our project focused on utilizing recipe data to help the user visualize and unde
 
 **Process**
 
-*Create a database of food recipes and another database of food ingredient nutrition through API calls to ![Edamam API](https://www.edamam.com/).
+*Create a database of food recipes and another database of food ingredient nutrition through API calls to <a href="https://www.edamam.com/" target="_blank">Edamam API</a>.
 
 *Design interactive dashboard for users to explore specific recipes using HTML and Javascript.
 
