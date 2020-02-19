@@ -1,4 +1,4 @@
-# Recipe Nutrition Dashboard
+# Recipe Nutrition Dashboard 
 
 Group Project by: David Blascyk, Michael Laska, Ingris O'Connor, and Cindy Pendarvis  
 
