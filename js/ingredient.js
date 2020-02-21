@@ -28,7 +28,7 @@ function findIngredients(varZ)
   d3.json("data/AllIngredients.json").then((data) => {
     
     dataArray = data;
-    console.log("AllIngredients", data);
+    //console.log("AllIngredients", data);
     for(i=0; i < recipeList.length; i++) {
 
       try {
