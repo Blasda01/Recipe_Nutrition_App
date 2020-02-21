@@ -29,7 +29,7 @@ Our project focused on utilizing recipe data to help the user visualize and unde
 * D3, 
 * Bootstrap CSS
 
-**Individual contributions:** JavaScript, D3, and JQuery code to generate dynamic dropdowns, lists, and graphs.
+**Individual contributions:** JavaScript, D3, and JQuery code to generate dynamic dropdowns, inputs, and bubble graphs.
 
 **Dashboard Snapshot**
 
