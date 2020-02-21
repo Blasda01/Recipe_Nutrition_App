@@ -130,7 +130,7 @@ function initChart()
         var name = ingDict[i][0].name;
             nameList.push(name); 
     }
-    console.log("Initial chart values", calorieInit);
+    //console.log("Initial chart values", calorieInit);
    
     //sizeList adjusted bubble size for asthetics
     var sizeList = calorieInit.map(x =>x * 1.0);  //irrelevant now, using sizeref...
@@ -173,7 +173,7 @@ function initChart()
 
     //store values for global variables yPos yAxis and yValue (to use in update functions)
     var plot = document.getElementById("bubble");
-    console.log("plot info", plot.data);
+    //console.log("plot info", plot.data);
 
     yPos = [];  //resets yPos list to zero (ycoordinate for each bubble)
     for(i=0; i < ingDict.length; i++) {
@@ -197,8 +197,8 @@ function amountsChanged()
   newWeights.push($(this).val());
   });
 
-  console.log("New weights",newWeights);
-  console.log("Orig weights", origWeights);
+  //console.log("New weights",newWeights);
+  //console.log("Orig weights", origWeights);
   
   //multiplier to adjust mutrition info based off ingredient amount change
   multiplier = [];
@@ -252,22 +252,6 @@ function updatePlot()
     Plotly.relayout("bubble", newLayout)
     
 }
-
-//Generate "change bubble plot" buttons
-var buttonList = ["Calories", "Fat", "Protein", "Sodium"];
-
-d3.select("#buttons").selectAll("button")
-  .data(buttonList)
-  .enter()
-  .append("button")
-  // .attr("id", "button")
-  // .attr("type", "button")
-  .attr("class", "btn btn-default")
-  // .attr("name", "graph buttons")
-  .property("value", function(d){return d;})
-  .text(function(d){return d;})
-  .exit()
-  .remove();
 
 
 function graphicChanged() {
@@ -325,7 +309,7 @@ function graphicChanged() {
     }
 
     // console.log("all graphs lists1", calList, fatList, protList, sodList);
-    console.log("multiplier current", multiplier);
+    //console.log("multiplier current", multiplier);
 
     //Apply multiplier to new nutrition list
     var calList2 = [];
@@ -344,7 +328,7 @@ function graphicChanged() {
           sodList2.push(s);
     };
 
-    // console.log("all graphs lists2", calList2, fatList2, protList2, sodList2);
+    console.log("all graphs lists2", calList2, fatList2, protList2, sodList2);
 
     //Captures which button was pushed by it's name
     var buttonValue = event.target.value;

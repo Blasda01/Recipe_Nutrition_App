@@ -54,8 +54,23 @@ function optionChanged()
 //Initialize Page
 function displayPage()
 {
-  console.log("Load Page")
-  //Dropdown select recipe
+  //Generate "change bubble plot" buttons
+  var buttonList = ["Calories", "Fat", "Protein", "Sodium"];
+
+  d3.select("#buttons").selectAll("button")
+    .data(buttonList)
+    .enter()
+    .append("button")
+    // .attr("id", "button")
+    // .attr("type", "button")
+    .attr("class", "btn btn-default")
+    // .attr("name", "graph buttons")
+    .property("value", function(d){return d;})
+    .text(function(d){return d;})
+    .exit()
+    .remove();
+    
+    //Dropdown select recipe
   var selector = d3.select("#selDataset");
   
   //Populate the dropdown list ***I changed "value" field to be index number
