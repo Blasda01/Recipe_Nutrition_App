@@ -5,8 +5,8 @@ function createIngredients (varY) {
   //List of ingredients pulled from varY object (varY passed from objectChanged function)
   var list = varY.recipe.ingredientLines;
 
-  console.log("Recipe in drop down")
-  console.log(varY.recipe.label);
+  console.log("Recipe in drop down: ", varY.recipe.label)
+  
 
   //Create Ingredients List, adjust length based on list variable
   //enter append merge exit remove
@@ -24,7 +24,7 @@ function createIngredients (varY) {
        .remove();
 
 }   
-  
+//-------------------------------------------------------------------------------------------------------  
 // Call optionChanged() when a change takes place to the DOM
 d3.selectAll("#selDataset").on("change", optionChanged);
 
@@ -33,7 +33,7 @@ function optionChanged()
 {
   //recipeIndex == dropdown index
   var recipeIndex = d3.select("#selDataset").property("value"); 
-  console.log("dropdown selection", recipeIndex);
+  //console.log("dropdown selection", recipeIndex);
   
 
   //read from recipe database and return the one recipe object(dictionary)
@@ -47,10 +47,12 @@ function optionChanged()
   createGaugeCharts(recipeObject); //in cindygauge.js
   d3.select("#recipe-name").text(recipeObject.recipe.label);
   d3.select("#link").text(recipeObject.recipe.url).attr("href",recipeObject.recipe.url).attr("target", "_blank");
-  console.log("text with the link", recipeObject.recipe.url) 
+  
   }); 
 }
 
+
+//------------------------------------------------------------------------------------------------------------------
 //Initialize Page
 function displayPage()
 {
@@ -69,7 +71,7 @@ function displayPage()
     .text(function(d){return d;})
     .exit()
     .remove();
-    
+
     //Dropdown select recipe
   var selector = d3.select("#selDataset");
   

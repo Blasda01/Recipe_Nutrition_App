@@ -9,8 +9,8 @@ window.yPos = [];
 window.sizeRef = 0;
 
 
-d3.select("#buttons").on("click", graphicChanged);
 
+//-------------------------------------------------------------------------------------------------------------------
 //Get ingredients info from seperate database
 
 function findIngredients(varZ)
@@ -18,7 +18,7 @@ function findIngredients(varZ)
   //List of ingredients from recipe Object(varZ from optionChanged function)
   recipeList = varZ.recipe.ingredientLines;
 
-  console.log("findIngredients recipeList", recipeList[2]);
+  //console.log("findIngredients recipeList", recipeList[2]);
 
   //Empty list of dictionaries to store ingredients' nutrition data
   ingDict = [];
@@ -39,7 +39,7 @@ function findIngredients(varZ)
         console.log("Failed to match ", recipeList[i]);
       }
     }
-    console.log("IngDict", ingDict);
+   // console.log("IngDict", ingDict);
      //List of ingredient weights (to be used for multiplier ratio)
      origWeights = [];
      for(i=0; i < ingDict.length; i++) {
@@ -52,8 +52,8 @@ function findIngredients(varZ)
       }
      }
 
-    console.log("findIngredients ingDict", ingDict);
-    console.log("origWeights", origWeights);
+    //console.log("findIngredients ingDict", ingDict);
+    //console.log("origWeights", origWeights);
 
     createIngredientsEdit();
     initChart();
@@ -63,6 +63,8 @@ function findIngredients(varZ)
     }); 
 }; 
 
+
+//-----------------------------------------------------------------------------------------------------------------------------
 function createIngredientsEdit()
 {
   //Ingredient list with key value pairs "name" : name, "weight": weight 
@@ -75,10 +77,10 @@ function createIngredientsEdit()
     listDropdown.push(loopDict);
     }
     catch(err) {
-      window.alert("Complete recipe info coming soon...choose a different one! ", err);
+      window.alert("Complete recipe info coming soon...choose a different one! ", err)
       break;
     }
-  };
+  }
  
   
   //enter update exit to populate Ingredient Info table (with text boxes!)
@@ -111,6 +113,9 @@ function createIngredientsEdit()
   .remove();
 }
 
+
+
+//---------------------------------------------------------------------------------------------
 //Initial bubble chart.  Called only once
 function initChart()
 {
@@ -187,8 +192,9 @@ function initChart()
 
 }
 
-// Call amountsChanged() when "Submit Updated Amounts" button clicked (onclick in HTML)
 
+//------------------------------------------------------------------------------------------------------------
+// Call amountsChanged() when "Submit Updated Amounts" button clicked (onclick in HTML)
 function amountsChanged()
 {
   //JQuery!!!
@@ -211,12 +217,12 @@ function amountsChanged()
     else {multiplier.push(1);
         }
     }
-    console.log("multiplier", multiplier);
+    //console.log("multiplier", multiplier);
 
     updatePlot();
 }
 
-
+//----------------------------------------------------------------------------------------------------------------
 function updatePlot()
 {
     // console.log("yValue before change", yValue)
@@ -253,6 +259,10 @@ function updatePlot()
     
 }
 
+
+
+//--------------------------------------------------------------------------------------------------------------------
+d3.select("#buttons").on("click", graphicChanged);
 
 function graphicChanged() {
     
@@ -364,7 +374,7 @@ function graphicChanged() {
         console.log("Bad button, no nutrition data to graph");
     }
 
-    console.log("List for",buttonValue, newList);
+    //console.log("List for",buttonValue, newList);
     
     //sizeList adjusted bubble size for asthetics
     var sizeList = newList.map(x =>x * 1.0);    //irrelevant now using sizeref
@@ -414,7 +424,7 @@ function graphicChanged() {
     }
     yAxis = plot.layout.yaxis.range[1];
     yValue = newList;
-    console.log("yValue after button click", yValue);
+   // console.log("yValue after button click", yValue);
 //   console.log("yPos for ", buttonValue, yPos);
 //   console.log("yAxis for ", buttonValue, yAxis);
 }
