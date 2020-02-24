@@ -9,7 +9,7 @@ Or you really wish you could figure out if that favorite recipe could be healthy
 Our project focused on utilizing recipe data to help the user visualize and understand how each ingredient contributes to their daily nutrition goals as well as help users to explore ways in which they can modify a recipe to meet their specific needs. 
 
 
-## Process
+## Process 
 
 * Create a database of food recipes and another database of food ingredient nutrition through API calls to <a href="https://www.edamam.com/" target="_blank">Edamam API</a>.
 
