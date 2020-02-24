@@ -1,5 +1,6 @@
  //Difine funtion to display metadata on selection
 //Difine funtion to display charts
+//to do: change calories, protein...to call from edited ingredients inputs
 function createGaugeCharts (recipe) {
 console.log(recipe);
 calories = recipe.recipe.totalDaily.ENERC_KCAL.quantity/recipe.recipe.yield;
